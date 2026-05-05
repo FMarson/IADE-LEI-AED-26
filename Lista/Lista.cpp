@@ -61,10 +61,6 @@ void Lista::adicionar(int valor, int posicao) {
             novo->ant = nodo->ant;
             nodo->ant = novo;
         }
-
-        //a partir do final
-
-        //
         tamanho++;
     }
 }
@@ -95,10 +91,6 @@ int Lista::getTamanho() {
     return tamanho;
 }
 
-int Lista::getValor(int posicao) {
-    return 0; //implementar
-}
-
 Nodo* Lista::getNodo(int posicao) {
     nodo = nullptr;
     if (posicao >= 0 && posicao < tamanho) {
@@ -108,6 +100,12 @@ Nodo* Lista::getNodo(int posicao) {
         nodo = tmp->ant;
     }
     return nodo;
+}
+
+//implementar os métodos abaixo
+
+int Lista::getValor(int posicao) {
+    return 0; // implementar
 }
 
 Nodo* Lista::procurarValor(int valor) {
